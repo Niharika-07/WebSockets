@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+</head>
+<body>
+    <script>
+        const ws = new WebSocket("ws://localhost:3000")
+
+        //when connected
+        ws.onopen = () => console.log("connected to websocket server")
+
+        //wehn there is incoming message
+        ws.onmessage = (msg) => console.log("message from the server: ", msg.data)
+
+        
+    </script>
+</body>
+</html>
